@@ -22,7 +22,6 @@ using System.Threading;
 using SerialPortLib;
 using NLog;
 
-
 namespace Test.Serial
 {
     class MainClass
