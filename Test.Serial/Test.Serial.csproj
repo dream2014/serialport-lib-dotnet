@@ -32,14 +32,6 @@
   <ItemGroup>
     <Compile Include="CommandClasses\CommandClassFactory.cs" />
     <Compile Include="Enums\Command.cs" />
-    <Compile Include="Enums\CommandClass.cs" />
-    <Compile Include="Enums\EventParameter.cs" />
-    <Compile Include="Enums\Function.cs" />
-    <Compile Include="Enums\GenericType.cs" />
-    <Compile Include="Enums\Message.cs" />
-    <Compile Include="Enums\OperationStatus.cs" />
-    <Compile Include="Enums\OverrideType.cs" />
-    <Compile Include="Enums\SecurityCommand.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="ICommandClass.cs" />
     <Compile Include="MetaMessage.cs" />
@@ -50,6 +42,8 @@
     <Compile Include="Utility\AesWork.cs" />
     <Compile Include="Utility\BitExtensions.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Values\AlarmValue.cs" />
+    <Compile Include="Values\VersionValue.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -79,7 +73,5 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Values\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
