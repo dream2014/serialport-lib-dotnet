@@ -22,7 +22,6 @@ using System.Threading;
 using SerialPortLib;
 using NLog;
 
-
 namespace MetaLib
 {
     class MainClass
