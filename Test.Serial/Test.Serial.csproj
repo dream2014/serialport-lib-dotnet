@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,8 +30,26 @@
     <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CommandClasses\CommandClassFactory.cs" />
+    <Compile Include="Enums\Command.cs" />
+    <Compile Include="Enums\CommandClass.cs" />
+    <Compile Include="Enums\EventParameter.cs" />
+    <Compile Include="Enums\Function.cs" />
+    <Compile Include="Enums\GenericType.cs" />
+    <Compile Include="Enums\Message.cs" />
+    <Compile Include="Enums\OperationStatus.cs" />
+    <Compile Include="Enums\OverrideType.cs" />
+    <Compile Include="Enums\SecurityCommand.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="ICommandClass.cs" />
+    <Compile Include="MetaMessage.cs" />
+    <Compile Include="MetaNode.cs" />
+    <Compile Include="MetaNodeControll.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\AesWork.cs" />
+    <Compile Include="Utility\BitExtensions.cs" />
+    <Compile Include="Utility\Utility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -60,5 +78,8 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Values\" />
   </ItemGroup>
 </Project>

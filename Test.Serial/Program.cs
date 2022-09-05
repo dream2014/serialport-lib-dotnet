@@ -23,7 +23,7 @@ using SerialPortLib;
 using NLog;
 
 
-namespace Test.Serial
+namespace MetaLib
 {
     class MainClass
     {
@@ -69,11 +69,11 @@ namespace Test.Serial
                 //N110=0,同步时间,1000
                 var msgSync = new byte[] { 0xAF, 0x00, 0x00, 0x00, 0x00, 0x81, 0x00, 0x1e, 0x00, 0x00, 0x42, 0x00, 0x01, 0x41, 0x00, 0x02, 0x43, 0x00, 0x03, 0x45, 0x00, 0x04, 0x3f, 0x00, 0x05, 0x3e, 0x00, 0x06, 0x41, 0x00, 0x07, 0x41, 0x00, 0x08, 0x3d, 0x00, 0x09, 0x40, 0x02, 0x0c };
 
-                var result = ComAssist.checkData(msgSync);
+                var result = ComAssist.VerifyChecksum(msgSync);
                 Console.WriteLine("------> check result <-------   :  {0}", result);
-                result = ComAssist.checkData(msgReturnDevices);
+                result = ComAssist.VerifyChecksum(msgReturnDevices);
                 Console.WriteLine("------> check result <-------   :  {0}", result);
-                result = ComAssist.checkData(msgNo);
+                result = ComAssist.VerifyChecksum(msgNo);
                 Console.WriteLine("------> check result <-------   :  {0}", result);
 
                 Console.WriteLine("\nPlease enter serial to open (eg. \"COM7\" or \"/dev/ttyUSB0\" without double quotes),");
